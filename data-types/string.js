@@ -33,3 +33,13 @@ let resTruncate=[truncate(str1,20),truncate(str2,20),];
 
 let trunc = document.getElementById("trunc");
 trunc.textContent=resTruncate;
+
+//4. Extract the money
+function extractCurrencyValue(str){
+    return +str.slice(1);
+}
+let currency = '$120';
+let resExtract=extractCurrencyValue(currency);
+
+let extract = document.getElementById("extract");
+extract.textContent=resExtract;
