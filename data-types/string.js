@@ -1,4 +1,2 @@
-"use strict";
-let para = document.getElementById("uppercase");
-
-para.textContent="tu madre";
+let par = document.getElementById("a");
+par.textContent="Imbécil";
