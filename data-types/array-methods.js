@@ -1,4 +1,3 @@
-//Ejercicios de Dani en clase
 us = [{ n: 'Teo', a: 2 }, { n: 'Óscar', a: 10 }, { n: 'Ángel', a: 20 }, { n: 'anonymoys', a: Infinity }, { n: 'Alí', a: 10 },];
 
 //nuevo array escupido, sin modificar el original, con usuarios mayores de edad
@@ -25,6 +24,23 @@ us.map(i=>i.n.toUpperCase());
 //2º: genero un objeto nuevo a partir del original y el original no cambia
 us.map(i=>({n:i.n.toUpperCase(), a:i.a}));
 
+//solucion a 
+us.map(u=>{
+  const uNew = structuredClone(u);
+  uNew.n=uNew.n.toUpperCase();
+  return uNew;
+})
+
+//solucion a ejercicios de casa
+//un us2 que esté ordenado alfabéticamente por nombre
+us.slice().sort((u1,u2)=>u1.a>u2.a).reverse();
+
+//un us3 que esté ordenado por edad de mayor a menor
+//una manera de hacerlo
+us.slice().sort((u1,u2)=>u1.a > u2.a);
+
+//un us4 que esté ordenador por nombre con locale de menor a mayor
+
+
 console.log(us);
 console.log(us2);
-
