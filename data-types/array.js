@@ -9,12 +9,13 @@ let isCopied = document.getElementById("isCopied");
 isCopied.textContent=length;
 
 //2. Array Operations
-let resultArray=[];
 let styles = ["Jazz", "Blues"];
-resultArray.push(styles);
 styles.push("Rock-n-Roll");
-styles[styles.length/2]="Classics";
-resultArray.push(styles);
+styles[Math.trunc(styles.length/2)]="Classics";
+styles.shift();
+styles.unshift('Rap','Reggae');
 
-let isCopied = document.getElementById("isCopied");
-isCopied.textContent=resultArray;
+let arrayOp = document.getElementById("resultArray");
+arrayOp.textContent=styles;
+
+//3. Calling in an array context
