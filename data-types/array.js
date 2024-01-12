@@ -30,18 +30,29 @@ arrayCalling.textContent=arr;
 
 //4. Sum input numbers
 function sumInput(){
-    let arrSum
-    do{
-        //asks for inputting a number
-        let numToSum = prompt("Please, input a number");
-        //inputs the number on an array
-
-
-        
-    }while(true);
-
+    let arrSum=[];
+    let numToSum;
+    //adds inputs to array
+    while(true){
+        numToSum=prompt("A number, please",0);
+        if (numToSum===""||numToSum===null|| !isFinite(numToSum)) break;
+        arrSum.push(+numToSum);
+    }
+    //calculates a sum through all the numbers in the array
+    let sum=0;
+    for (let i of arrSum){
+        sum+=i;
+    }
+    return sum;
 }
 let arrSum=sumInput();
-arrSum=2;
-let sumInput = document.getElementById("sumInput");
-arrayCalling.textContent=arrSum;
+
+let sumIn = document.getElementById("sumInput");
+sumIn.textContent=arrSum;
+
+//5. A maximal subarray
+let arr2=[1,-2,3,4,-9,6];
+
+
+let subArray = document.getElementById("maximalSubarray");
+subArray.textContent=arrSum;
