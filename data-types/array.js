@@ -19,3 +19,29 @@ let arrayOp = document.getElementById("resultArray");
 arrayOp.textContent=styles;
 
 //3. Calling in an array context
+let arr = ["a", "b"];
+arr.push(function() {
+  alert( this );
+});
+arr[2](); // ?
+
+let arrayCalling = document.getElementById("context");
+arrayCalling.textContent=arr;
+
+//4. Sum input numbers
+function sumInput(){
+    let arrSum
+    do{
+        //asks for inputting a number
+        let numToSum = prompt("Please, input a number");
+        //inputs the number on an array
+
+
+        
+    }while(true);
+
+}
+let arrSum=sumInput();
+arrSum=2;
+let sumInput = document.getElementById("sumInput");
+arrayCalling.textContent=arrSum;
