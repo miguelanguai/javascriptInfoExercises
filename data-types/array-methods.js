@@ -41,6 +41,11 @@ us.slice().sort((u1,u2)=>u1.a > u2.a);
 
 //un us4 que esté ordenador por nombre con locale de menor a mayor
 
+//uno que no haga in place que ordene de mayor a menor por nombre y de mayor a
+//menor por edad
+us.slice().sort((u1,u2)=>
+  u1.a !== u2.a ? u1.a > u2.a : u1.n > u2.n
+  )
 
 console.log(us);
 console.log(us2);
