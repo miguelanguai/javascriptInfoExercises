@@ -47,10 +47,18 @@ us.slice().sort((u1,u2)=>u1.a > u2.a);
 //menor por edad
 us.slice().sort((u1,u2)=>
   u1.a !== u2.a ? u1.a > u2.a : u1.n > u2.n
-  )
+  );
 //otra opcion en la que se hace cada sort por separado
 us.slice().sort((u1,u2)=>u1.n>u2.n)
-  .sort((u1,u2)=>u1.a>u2.a)
+  .sort((u1,u2)=>u1.a>u2.a);
+//ordenar por nombre de menro a mayor
+us.slice().sort((u1,u2)=>
+  u1.localeCompare(u2.n, 'es'));
+
+
+//ordenar por nombre de menro a mayor con sensibilidad alfabeto español
+us.slice().sort((u1,u2)=>
+  u1.localeCompare(u2.n, 'es', {sensitivity: 'base'}));
 
 
 console.log(us);
