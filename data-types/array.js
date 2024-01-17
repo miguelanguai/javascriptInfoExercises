@@ -54,12 +54,17 @@ sumIn.textContent=arrSum;
 let arr2=[1,-2,3,4,-9,6];
 function getMaxSubSum(arr2){
     let maxSum=0;
-    //first from left to right
-    
-    //then from right to left
-
+    for (let i=0;i<arr2.length;i++){
+        let currentSum=0;
+        for (let j=i;j<arr2.length;j++){
+            currentSum+=arr2[j];
+            if (currentSum>maxSum){
+                maxSum=currentSum;
+            }
+        }
+    }
     return maxSum;
 }
-
+let returnedSum=getMaxSubSum(arr2);
 let subArray = document.getElementById("maximalSubarray");
-subArray.textContent=arrSum;
+subArray.textContent=returnedSum;
