@@ -31,3 +31,10 @@ let repeatInput = readNumber();
 let c = document.getElementById("repeatInput");
 c.textContent=repeatInput;
 
+//4. An occasional infintie loop
+let i =0;
+while (i!=10){
+    i+=0.2;
+}
+// no answer in html in this exercise
+//answer: i would never equal 10
