@@ -31,10 +31,21 @@ let repeatInput = readNumber();
 let c = document.getElementById("repeatInput");
 c.textContent=repeatInput;
 
-//4. An occasional infintie loop
+//4. An occasional infinite loop
+/*
 let i =0;
 while (i!=10){
     i+=0.2;
 }
+*/
 // no answer in html in this exercise
 //answer: i would never equal 10
+
+//5. A random number from min to max
+function random(min, max){
+    return Math.random() * (max - min) + min;
+}
+let randNumMinToMax= random (1,5);
+
+let e = document.getElementById("randNumMinToMax");
+e.textContent=randNumMinToMax;
