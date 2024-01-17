@@ -49,3 +49,12 @@ let randNumMinToMax= random (1,5);
 
 let e = document.getElementById("randNumMinToMax");
 e.textContent=randNumMinToMax;
+
+//6. A random integer number from min to max
+function randomInteger(min, max){
+    return parseInt(Math.random() * (max - min) + min);
+}
+let randIntMinToMax= randomInteger (1,5);
+
+let f = document.getElementById("randIntMinToMax");
+f.textContent=randIntMinToMax;
