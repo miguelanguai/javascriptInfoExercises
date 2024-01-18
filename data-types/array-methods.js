@@ -99,3 +99,17 @@ let filtered = filterRange(arrFilterRange,1,4);
 let b = document.getElementById("filterRange");
 b.textContent=filtered;
 
+//3. Filter range "in place"
+function filterRangeInPlace(arr,a,b){
+  for (let i=0;i<arr.length;i++){
+    if(!a>arr[i]<b){
+      arr.splice(i,1);
+    }
+  }
+
+}
+let arrFilterRangeInPlace=[5,3,8,1];
+filterRangeInPlace(arrFilterRangeInPlace,1,4);
+
+c = document.getElementById("filterRangeInPlace");
+c.textContent=arrFilterRangeInPlace;
