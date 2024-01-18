@@ -102,8 +102,9 @@ b.textContent=filtered;
 //3. Filter range "in place"
 function filterRangeInPlace(arr,a,b){
   for (let i=0;i<arr.length;i++){
-    if(!a>arr[i]<b){
+    if(arr[i]<a||arr[i]>b){
       arr.splice(i,1);
+      i--;
     }
   }
 
@@ -113,3 +114,10 @@ filterRangeInPlace(arrFilterRangeInPlace,1,4);
 
 c = document.getElementById("filterRangeInPlace");
 c.textContent=arrFilterRangeInPlace;
+
+//4. Sort in decreasing order
+let arrSortDecOrder=[5,2,1,-10,8];
+let arrDecreased=arrSortDecOrder.sort((a,b)=>b-a);
+
+let d = document.getElementById("sortDecreasingOrder");
+d.textContent=arrDecreased;
