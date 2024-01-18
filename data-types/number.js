@@ -1,3 +1,4 @@
+"use strict";
 //1. Sum numbers from the visitor
 let num1=+prompt("Write first number",0);
 let num2=+prompt("Write second number",0);
