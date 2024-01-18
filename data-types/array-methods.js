@@ -85,4 +85,17 @@ let aDone = camelize("background-color");
 a = document.getElementById("translatedBorder");
 a.textContent=aDone;
 
+//2. Filter range
+function filterRange(arr,a,b){
+  let arrFiltered;
+  //filtrar 
+  arrFiltered=arr.filter(it=>(it>=a&&it<=b));
+
+  return arrFiltered;
+}
+let arrFilterRange=[5,3,8,1];
+let filtered = filterRange(arrFilterRange,1,4);
+
+let b = document.getElementById("filterRange");
+b.textContent=filtered;
 
