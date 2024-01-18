@@ -28,5 +28,29 @@ let calculator={
 }
 calculator.read();
 
-b = document.getElementById("usingThis");
+b = document.getElementById("createCalculator");
 b.textContent=JSON.stringify(calculator);
+
+//3. Chaining
+let ladder={
+    step: 0,
+    up(){
+        this.step++;
+    },
+    down(){
+        this.step--;
+    },
+    showStep: function(){
+        alert(this.step);
+    }
+}
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.down();
+ladder.up();
+ladder.up();
+ladder.up();
+
+c = document.getElementById("chaining");
+c.textContent=JSON.stringify(ladder);
