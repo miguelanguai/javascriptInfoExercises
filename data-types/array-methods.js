@@ -1,3 +1,5 @@
+/*
+//aqui los ejercicios improvisados de Dani en clase
 us = [{ n: 'Teo', a: 2 }, { n: 'Óscar', a: 10 }, { n: 'Ángel', a: 20 }, { n: 'anonymoys', a: Infinity }, { n: 'Alí', a: 10 },];
 
 //nuevo array escupido, sin modificar el original, con usuarios mayores de edad
@@ -63,3 +65,24 @@ us.slice().sort((u1,u2)=>
 
 console.log(us);
 console.log(us2);
+*/
+
+//Aqui los ejercicios
+"use strict";
+
+//1. Translate border-left-width to borderLeftWidth
+function camelize(str){
+  //put into an array every word separated by hyphen
+  let arrCam=str.split("-");
+  //upperCase every first character of each key (except key 0)
+  arrCam=arrCam.map((word, index)=>index==0?word:word[0].toUpperCase() + word.slice(1));
+  //joins the elements of the array
+  arrCam=arrCam.join('');
+  return arrCam;
+}
+let aDone = camelize("background-color");
+
+a = document.getElementById("translatedBorder");
+a.textContent=aDone;
+
+
