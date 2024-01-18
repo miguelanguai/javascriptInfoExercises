@@ -7,7 +7,7 @@ user.name="Pete";
 delete user.name;
 
 let a = document.getElementById("helloObject");
-a.textContent=user.toString();
+a.textContent=JSON.stringify(user);
 
 //2. Check for emptiness
 function isEmpty(obj){
@@ -35,3 +35,22 @@ for (let key in salaries){
 
 let c = document.getElementById("sumObjProperties");
 c.textContent=sumProp;
+
+//4. Multiply numeric property values by 2
+function multiplyNumeric(obj){
+    for (let key in obj){
+        if (typeof obj[key]==="number"){
+            obj[key]*=2;
+        }
+    }
+    return obj;
+}
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+let menuMultiplied=multiplyNumeric(menu);
+
+let d = document.getElementById("multiplyNumPropValues");
+d.textContent=JSON.stringify(menuMultiplied);
