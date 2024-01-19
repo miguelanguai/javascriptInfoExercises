@@ -134,3 +134,16 @@ let arrCopAndSorted=copySorted(arrCopyAndSort);
 e = document.getElementById("copySortArray");
 e.textContent=arrCopAndSorted;
 
+//6. Create an extendable calculator
+function Calculator(arr){
+  function calculate(str){
+    arr=arr.split(' ');
+    a=arr[0];
+    op=arr[1];
+    b=arr[2];
+  }
+}
+
+
+f = document.getElementById("copySortArray");
+f.textContent=arrCopAndSorted;
