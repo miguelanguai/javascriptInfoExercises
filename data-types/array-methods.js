@@ -121,3 +121,16 @@ let arrDecreased=arrSortDecOrder.sort((a,b)=>b-a);
 
 let d = document.getElementById("sortDecreasingOrder");
 d.textContent=arrDecreased;
+
+//5. Copy and sort array
+function copySorted(arr){
+  let collator = new Intl.Collator('es');
+  arr.slice().sort(collator.compare);//using collator, not sort
+  return arr;
+}
+let arrCopyAndSort=["HTML", "JavaScript", "CSS"];
+let arrCopAndSorted=copySorted(arrCopyAndSort);
+
+e = document.getElementById("copySortArray");
+e.textContent=arrCopAndSorted;
+
