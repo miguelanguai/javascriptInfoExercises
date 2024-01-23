@@ -135,13 +135,24 @@ e = document.getElementById("copySortArray");
 e.textContent=arrCopAndSorted;
 
 //6. Create an extendable calculator
-function Calculator(arr){
-  function calculate(str){
-    arr=arr.split(' ');
-    a=arr[0];
-    op=arr[1];
-    b=arr[2];
-  }
+function Calculator() {
+  this.methods = {
+    "-": (a, b) => a - b,
+    "+": (a, b) => a + b
+  };
+  this.calculate = function(str) {
+    let split = str.split(' '),
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
+    if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+      return NaN;
+    }
+    return this.methods[op](a, b);
+  };
+  this.addMethod = function(name, func) {
+    this.methods[name] = func;
+  };
 }
 
 
