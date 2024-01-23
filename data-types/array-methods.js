@@ -155,7 +155,7 @@ function Calculator() {
   };
 }
 
-f = document.getElementById("copySortArray");
+f = document.getElementById("extendableCalculator");
 f.textContent=arrCopAndSorted;
 
 //7. Map to names
@@ -165,7 +165,7 @@ let mary = { name: "Mary", age: 28 };
 let users = [ john, pete, mary ];
 let names = users.map(item=>item.name);
 
-let g = document.getElementById("copySortArray");
+let g = document.getElementById("mapToNames");
 g.textContent=names;
 
 //8. Map to objects
@@ -178,7 +178,20 @@ let users2 = [ john2, pete2, mary2 ];
 let usersMapped = users2.map(user2=>({
   fullName:user2.name+" "+user2.surname,
   id:user2.id
-}))
+}));
+let h = document.getElementById("mapToObjects");
+h.textContent=JSON.stringify(usersMapped,null,2);
 
-h = document.getElementById("copySortArray");
-h.textContent=usersMapped;
+//9. Sort users by age
+function sortByAge(users3){
+  users3.sort( (a, b) => a.age - b.age );
+}
+
+let john3 = { name: "John", age: 25 };
+let pete3 = { name: "Pete", age: 30 };
+let mary3 = { name: "Mary", age: 28 };
+let users3 = [ pete, john, mary ];
+sortByAge(users3);
+
+let i = document.getElementById("sortUsersAge");
+i.textContent=JSON.stringify(users3,null,2);
