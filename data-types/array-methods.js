@@ -163,7 +163,22 @@ let john = { name: "John", age: 25 };
 let pete = { name: "Pete", age: 30 };
 let mary = { name: "Mary", age: 28 };
 let users = [ john, pete, mary ];
-let names = users.map(item,item.name);
+let names = users.map(item=>item.name);
 
-g = document.getElementById("copySortArray");
+let g = document.getElementById("copySortArray");
 g.textContent=names;
+
+//8. Map to objects
+let john2 = { name: "John", surname: "Smith", id: 1 };
+let pete2 = { name: "Pete", surname: "Hunt", id: 2 };
+let mary2 = { name: "Mary", surname: "Key", id: 3 };
+
+let users2 = [ john2, pete2, mary2 ];
+
+let usersMapped = users2.map(user2=>({
+  fullName:user2.name+" "+user2.surname,
+  id:user2.id
+}))
+
+h = document.getElementById("copySortArray");
+h.textContent=usersMapped;
