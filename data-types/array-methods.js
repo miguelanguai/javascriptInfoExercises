@@ -195,3 +195,29 @@ sortByAge(users3);
 
 let i = document.getElementById("sortUsersAge");
 i.textContent=JSON.stringify(users3,null,2);
+
+//10. Shuffle an array
+function shuffle(arr4){
+  arr4.sort(()=> Math.random()-0.5);
+}
+let arr4=[1,2,3];
+shuffle(arr4);
+
+let j = document.getElementById("shuffleArray");
+j.textContent=arr4;
+
+//11. Get average age
+function getAverageAge(arr5){
+  let sumAges = arr5.reduce((sum, current)=> sum+current.age,0);
+  return sumAges/arr5.length;
+}
+
+let john5 = { name: "John", age: 25 };
+let pete5 = { name: "Pete", age: 30 };
+let mary5 = { name: "Mary", age: 29 };
+
+let arr5=[john5,pete5,mary5];
+let resultGetAverageAge=getAverageAge(arr5);
+
+let k = document.getElementById("getAverageAge");
+k.textContent=resultGetAverageAge;
